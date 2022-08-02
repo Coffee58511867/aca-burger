@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
+function removeTomato(){
+  document.getElementById("tomato")!.style.display="none";  
+  
+}
 
-function Tomato() {
+function Tomato() { 
   return (
     <div>
-    <button className="tomato">Tomato</button>
+    <button className="tomato" id="tomato" onClick={removeTomato}>Tomato</button>
 </div>
   );
 }
