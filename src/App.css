@@ -63,6 +63,7 @@ h1 {
     border-radius: 10px;
     border: none;
     font-weight: bold;
+    float: left;
 }
 
 .btns2 {
