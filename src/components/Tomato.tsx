@@ -1,14 +1,11 @@
 import React from 'react';
-import './App.css';
-function removeTomato(){
-  document.getElementById("tomato")!.style.display="none";  
-  
-}
+import '../App.css';
+
 
 function Tomato() { 
   return (
     <div>
-    <button className="tomato" id="tomato" onClick={removeTomato}>Tomato</button>
+    <button className="tomato" id="tomato" >Tomato</button>
 </div>
   );
 }
