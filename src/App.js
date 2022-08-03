@@ -6,11 +6,10 @@ import Meat from './components/Meat';
 import Lattuce from './components/Lattice';
 import BaseBread from './components/BaseBread';
 
-
 function App() {
+
     function addTomato() {
         document.getElementById("tomato").style.display = "block";
-
     }
 
     function removeTomato() {
@@ -28,7 +27,6 @@ function App() {
 
     function addLattice() {
         document.getElementById("lattice").style.display = "block";
-
     }
 
     function removeLattice() {
