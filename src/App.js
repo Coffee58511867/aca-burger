@@ -1,74 +1,75 @@
-import React from 'react'
-import './App.css';
-import TopBread from './components/TopBread';
-import Tomato from './components/Tomato';
-import Meat from './components/Meat';
-import Lattuce from './components/Lattice';
-import BaseBread from './components/BaseBread';
+import React, { useState } from "react";
+import "./App.css";
+import TopBread from "./components/TopBread";
+import Tomato from "./components/Tomato";
+import Meat from "./components/Meat";
+import Lattuce from "./components/Lattice";
+import BaseBread from "./components/BaseBread";
 
 function App() {
+    const [showtomato, setShowTomato] = useState(true);
+    const [showmeat, setShowMeat] = useState(true);
+    const [showlattice, setShowLattice] = useState(true);
 
     function addTomato() {
-        document.getElementById("tomato").style.display = "block";
+        setShowTomato(true);
     }
 
     function removeTomato() {
-        document.getElementById("tomato").style.display = "none";
+        setShowTomato(false);
     }
 
     function addMeat() {
-        document.getElementById("meat").style.display = "block";
-
+        setShowMeat(true);
     }
 
     function removeMeat() {
-        document.getElementById("meat").style.display = "none";
+        setShowMeat(false);
     }
 
     function addLattice() {
-        document.getElementById("lattice").style.display = "block";
+        setShowLattice(true);
     }
 
     function removeLattice() {
-        document.getElementById("lattice").style.display = "none";
+        setShowLattice(false);
     }
 
     return ( <
         div className = "App" >
-
         <
         h1 > ACA Burger < /h1> <
-        TopBread / >
-        <
-        Tomato name = "Tomato" / >
-        <
-        Meat name = "Meat" / >
-        <
-        Lattuce name = "Lattice" / >
-        <
+        TopBread / > { showtomato && < Tomato name = "Tomato" / > } { showmeat && < Meat name = "Meat" / > } { showlattice && < Lattuce name = "Lattice" / > } <
         BaseBread / >
 
         <
         div >
         <
         button className = "addbtn"
-        onClick = { addTomato } > Add Tomato < /button> <
+        onClick = { addTomato } >
+        Add Tomato <
+        /button> <
         button className = "btns2"
-        onClick = { removeTomato } > Remove Tomato < /button> <
+        onClick = { removeTomato } >
+        Remove Tomato <
+        /button> <
         button className = "addbtn"
-        onClick = { addMeat } > Add Meat < /button> <
+        onClick = { addMeat } >
+        Add Meat <
+        /button> <
         button className = "btns2"
-        onClick = { removeMeat } > Remove Meat < /button> <
+        onClick = { removeMeat } >
+        Remove Meat <
+        /button> <
         button className = "addbtn"
-        onClick = { addLattice } > Add Lattice < /button> <
+        onClick = { addLattice } >
+        Add Lattice <
+        /button> <
         button className = "btns2"
-        onClick = { removeLattice } > Remove Lattice < /button>
-
-        <
-        /div>
-
-
-        <
+        onClick = { removeLattice } >
+        Remove Lattice <
+        /button> <
+        /div> <
         /div>
     );
 }
